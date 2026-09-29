@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Dress Style Outfit Rayhan</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Quicksand:wght@600;700&display=swap"
+     rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+    <style>
+      /* =========================
+         RESPONSIVE
+      ========================= */
+      @media (max-width: 991px) {
+        .navbar-nav {
+          padding-top: 1rem;
+        }
+
+        .nav-link {
+          padding: 0.6rem 0;
+          border-bottom: none !important;
+        }
+
+        .navbar .btn {
+          margin-top: 0.5rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .text-content h1 {
+          font-size: 2rem;
+        }
+
+        .hero-section {
+          padding: 3rem 0 4rem;
+        }
+
+        .hero-pod {
+          inset: 0.5rem;
+        }
+      }
+      /* =========================
+         GLOBAL
+      ========================= */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background-color: #fff2f5;
+        color: #2c1a1d;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1,h2,h3,h4,h5,h6
+      .font-display {
+        font-family: "Quicksand", sans-serif;
+        font-weight: 700;
+        color: #2c1a1d;
+      }
+
+      /* =========================
+         NAVBAR
+      ========================= */
+      .bg-biru {
+        background-color: rgba(77, 104, 184, 0.95);
+      }
+
+      .navbar-brand img {
+        object-fit: contain;
+      }
+
+      .nav-link {
+        color: #ffffff !important;
+        font-weight: 500;
+        transition: 0.3s ease;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: #ffffff !important;
+        border-bottom: 2px solid #ea1212;
+      }
+
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+      }
+
+      .btn-light {
+        color: #2c1a1d;
+      }
+
+      /* =========================
+         MAIN CONTENT
+      ========================= */
+      #main-content {
+        background-color: #fede df;
+        background-color: rgb(254, 222, 223);
+      }
+
+      /* =========================
+         HERO
+      ========================= */
+      .hero-section {
+        position: relative;
+        overflow: hidden;
+        padding: 4rem 0 5rem;
+      }
+
+      .text-content h1 {
+        font-size: 3rem;
+        line-height: 1.12;
+      }
+
+      .text-content p {
+        color: #73575c !important;
+      }
+
+      /* Animasi maskot */
+      @keyframes floatMascot {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+
+        50% {
+          transform: translateY(-10px) rotate(1.5deg);
+        }
+      }
+
+      .animate-mascot {
+        animation: floatMascot 4.5s ease-in-out infinite;
+      }
+
+      .hero-image-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-pod {
+        position: absolute;
+        inset: 1rem;
+        background: linear-gradient(180deg, #ffffff 0%, rgba(252, 231, 236, 0.4) 60%, #fff8f0 100%);
+        border-radius: 44px;
+        box-shadow: 0 14px 28px -6px rgba(216, 67, 96, 0.12);
+        border: 4px solid #ffffff;
+        transform: rotate(2deg);
+      }
+
+      /* TRUST BAR */
+      .trust-bar {
+        padding: 2rem 0;
+        background-color: #fcfcfc;
+        border-top: 1px solid #f2ced6;
+        border-bottom: 1px solid #f2ced6;
+      }
+
+      .trust-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        color: #d84360;
+        background-color: #fce7ec;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.2rem;
+      }
+
+      /* =========================
+         KATEGORI
+      ========================= */
+      .kategori-card {
+        background: #ffffff;
+        border: 1px solid #f2ced6;
+        border-radius: 24px;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        height: 100%;
+      }
+
+      .kategori-card:hover {
+        box-shadow: 0 14px 28px -6px rgba(216, 67, 96, 0.18);
+        transform: translateY(-5px);
+      }
+
+      .kategori-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 1rem;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        background-color: #fce7ec;
+        color: #d84360;
+        transition: transform 0.3s ease;
+      }
+
+      .kategori-card:hover .kategori-icon {
+        transform: scale(1.08);
+      }
+
+      .kategori-card h3 {
+        color: #2c1a1d;
+      }
+
+      .kategori-card p {
+        color: #73575c;
+      }
+
+      /* BEST SELLER */
+      .bestseller-section {
+        padding: 4rem 0;
+        background-color: #fff;
+        border-top: 1px solid #F2CED6;
+        border-bottom: 1px solid #F2CED6;
+      }
+      .product-card {
+        background-color: #FFF2F5;
+        border: 1px solid #F2CED6;
+        border-radius: 30px;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+      .product-card:hover {
+        box-shadow: 0 14px 28px -6px rgb(216, 67, 96, 0.12);
+      }
+      .product-img-wrap {
+        position: relative;
+        height: 220px;
+        background-color: #FFF8F0;
+        border: 1px solid #F2CED6;
+        border-radius: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .product-img-wrap.choco { background-color: rgba(255, 238, 200);}
+      .product-tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 700;
+        color: #d84360;
+        border: 1px solid #F2CED6;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .product-tag.green { color: #5B8A61;}
+      .product-tag .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #d84360;
+      }
+      .product-tag.green .dot { background-color: #5B8A61;}
+      .product-icon {
+        width: 200px;
+        height: 200px;
+        transition: transform 0.3s ease;
+      }
+      .product-card:hover .product-icon { transform: scale(1.05); }
+
+      product-footer {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(242, 206, 214, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      /* TENTANG */
+      .tentang-section {
+        padding: 4rem 0;
+      }
+      .tentang-card {
+        background-color: #fff8f0;
+        border: 1px solid #f2ced6;
+        border-radius: 36px;
+        padding: 3rem 2rem;
+        box-shadow: 0 14px 28px -6px rgba(216, 67, 96, 0.12);
+      }
+      .mascot-badget-cirle {
+        width: 192px;
+        height: 192px;
+        margin: 0 auto;
+        background:#fff;
+        border: 4px solid #f2ced6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      /* TESTIMONI */
+      .testimoni-section {
+        padding: 4rem 0;
+        background-color: #fff;
+        border-top: 1px solid #F2CED6;
+        border-bottom: 1px solid #F2CED6;
+      }
+      .test-card {
+        background-color: #FFF2F5;
+        border: 1px solid #F2CED6;
+        border-radius: 24px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+      .text-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        background-color: #fce7ec;
+        color: #d84360;
+      }
+      .testi-avatar.cream {
+        background-color: #FFF8F0;
+        color: #2c1a1d;
+      }
+      .testi-avatar img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 100%;
+      }
+      /* ================ GALERI ================ */
+      .galeri-section {
+        padding: 4rem 0;
+      }
+      .galeri-box {
+        aspect-ratio: 1 / 1;
+        border-radius: 16px;
+        border: 1px solid #f2ced6;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        cursor: pointer;
+        transition: opactiy 0.2s ease;
+        font-size: 600;
+        color: #ffff;
+      }
+      .galeri-box:hover {
+        opacity: 0.9;
+      }
+      .galeri-1 {
+        background:
+        linear-gradient(rgba(255, 255, 255, 0.171), rgba(0, 0, 0, 0.281)),
+        url('gambar/galeri-1.jpg');
+        background-color: cover;
+      }
+      .galeri-2 {
+         background: 
+         linear-gradient(rgba(255, 255, 255, 0.171), rgba(0, 0, 0, 0, 0.281)),
+         url('gambar/gallery-2.jpg');
+         background-size: cover;
+      }
+      .galeri-3 {
+        background: 
+        linear-gradient(rgba(255, 255, 255, 0.171), rgba(0, 0, 0, 0, 0.281)),
+        url('gambar/gallery-3.jpg');
+        background-size: cover;
+      }
+      .galeri-4 {
+        background: 
+        linear-gradient(rgba(255, 255, 255, 0.171), rgba(0, 0, 0, 0.281)),
+        url('gambar/gallery-4.jpg');
+        background-size: cover;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <!-- =========================
+     NAVBAR
+========================== -->
+    <nav class="navbar navbar-expand-lg bg-biru sticky-top">
+      <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#home">
+          <img
+            src="gambar/logo.1-1.png"
+            alt="Logo Style Outfit"
+            width="80"
+            height="50"
+          />
+        </a>
+
+        <!-- Toggle Mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Buka menu navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Menu Utama -->
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#kategori"> Kategori </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#terbaru"> Baju Terbaru </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#promo"> Promo </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang"> Tentang Kami </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak"> Kontak </a>
+            </li>
+          </ul>
+
+          <!-- Navbar Right -->
+          <ul class="navbar-nav gap-2 align-items-lg-center">
+            <!-- Keranjang -->
+            <li class="nav-item">
+              <a
+                href="#checkout"
+                class="btn btn-light position-relative rounded-pill px-3"
+                aria-label="Keranjang belanja"
+              >
+                <i class="bi bi-cart4"></i>
+
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                >
+                  99+
+                  <span class="visually-hidden">
+                    jumlah item dalam keranjang
+                  </span>
+                </span>
+              </a>
+            </li>
+
+            <!-- Pesan Sekarang -->
+            <li class="nav-item">
+              <a href="#terbaru" class="btn btn-danger rounded-pill px-4">
+                <i class="bi bi-bag-heart me-1"></i>
+                Pesan Sekarang
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main id="main-content">
+      <!-- =========================
+           HERO SECTION
+      ========================== -->
+      <section id="home" class="hero-section">
+        <div class="container position-relative" style="z-index: 1">
+          <div class="row align-items-center g-5">
+            <!-- Hero Text -->
+            <div class="col-lg-7 text-content text-center text-lg-start">
+              <h1 class="mb-3">Shop Dress Style Outfit</h1>
+
+              <p class="mb-4 mx-auto mx-lg-0" style="max-width: 36rem">
+                Temukan berbagai outfit kekinian yang nyaman dan cocok untuk
+                melengkapi gaya sehari-harimu. Style Outfit siap menemani setiap
+                momen dengan pilihan fashion yang trendy dan stylish.
+                <strong>Dress Your Style, Be Your Own Trend.</strong>
+              </p>
+
+              <div
+                class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start"
+              >
+                <a
+                  href="#kategori"
+                  class="btn btn-danger fw-bold px-4 py-3 rounded-4 d-inline-flex align-items-center justify-content-center gap-2"
+                >
+                  <i class="bi bi-bag-heart"></i>
+                  Jelajahi Baju
+                </a>
+
+                <a
+                  href="#toko"
+                  class="btn btn-light fw-bold px-4 py-3 rounded-4 border"
+                >
+                  Lihat Koleksi
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="col-lg-5">
+              <div class="hero-image-wrapper">
+                <div class="hero-pod"></div>
+
+                <img
+                  src="gambar/gambar-hero.png"
+                  alt="Maskot toko baju Style Outfit"
+                  class="img-fluid position-relative animate-mascot"
+                  style="z-index: 1; max-width: 380px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           TRUST BAR
+      ========================== -->
+      <section class="trust-bar">
+        <div class="container">
+          <div class="row g-4 text-center">
+            <!-- Trust 1 -->
+            <div class="col-6 col-md-4">
+              <div
+                class="d-flex align-items-center justify-content-center gap-3"
+              >
+                <div class="trust-icon">
+                  <i class="bi bi-person-check"></i>
+                </div>
+
+                <div class="text-start">
+                  <h4 class="h6 fw-bold mb-1">Pelayanan Ramah</h4>
+
+                  <p class="small text-secondary mb-0">
+                    Siap membantu kebutuhanmu
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trust 2 -->
+            <div class="col-6 col-md-4">
+              <div
+                class="d-flex align-items-center justify-content-center gap-3"
+              >
+                <div class="trust-icon">
+                  <i class="bi bi-grid"></i>
+                </div>
+
+                <div class="text-start">
+                  <h4 class="h6 fw-bold mb-1">Banyak Pilihan</h4>
+
+                  <p class="small text-secondary mb-0">
+                    Koleksi fashion beragam
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trust 3 -->
+            <div class="col-6 col-md-4">
+              <div
+                class="d-flex align-items-center justify-content-center gap-3"
+              >
+                <div class="trust-icon">
+                  <i class="bi bi-people"></i>
+                </div>
+
+                <div class="text-start">
+                  <h4 class="h6 fw-bold mb-1">Dipercaya Pelanggan</h4>
+
+                  <p class="small text-secondary mb-0">
+                    Mengutamakan kepuasan pelanggan
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+           KATEGORI
+      ========================== -->
+      <section id="kategori" class="py-5">
+        <div class="container">
+          <!-- Section Heading -->
+          <div class="text-center mx-auto mb-5" style="max-width: 36rem">
+            <span class="text-danger fw-bold text-uppercase small">
+              Toko Style Pilihan Baju
+            </span>
+
+            <h2 class="mt-2 mb-3">Temukan Baju Favorit Anda</h2>
+
+            <p class="text-secondary">
+              Pilih kategori outfit sesuai dengan gaya dan kebutuhanmu.
+            </p>
+          </div>
+
+          <!-- Category Cards -->
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-6 col-md-3">
+              <div class="kategori-card">
+                <div class="kategori-icon">
+                  <i class="bi bi-person-standing-dress"></i>
+                </div>
+
+                <h3 class="h6 mb-1">Dress</h3>
+
+                <p class="small mb-0">Dress stylish dan kekinian</p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-6 col-md-3">
+              <div class="kategori-card">
+                <div class="kategori-icon">
+                  <i class="bi bi-person"></i>
+                </div>
+
+                <h3 class="h6 mb-1">Casual</h3>
+
+                <p class="small mb-0">Outfit casual sehari-hari</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-6 col-md-3">
+              <div class="kategori-card">
+                <div class="kategori-icon">
+                  <i class="bi bi-stars"></i>
+                </div>
+
+                <h3 class="h6 mb-1">Trendy</h3>
+
+                <p class="small mb-0">Fashion mengikuti tren</p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-6 col-md-3">
+              <div class="kategori-card">
+                <div class="kategori-icon">
+                  <i class="bi bi-bag-heart"></i>
+                </div>
+
+                <h3 class="h6 mb-1">Outfit</h3>
+
+                <p class="small mb-0">Lengkapi gaya favoritmu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== BEST SELLER ==================== -->
+      <section id="bestseller" class="bestseller-section">
+        <div class="container">
+          <div class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-5">
+            <div>
+              <span class="text-danger fw-bold text-uppercase small" style="letter-spacing: .05em;">Pilihan Style outfit Fashion</span>
+              <h2 class="mt-1">Koleksi style outfit fashion</h2>
+            </div>
+            <p class="text-secondary small mb-0 mt-2 mt-md-0" style="max-width: 24rem;">
+              Pilihan outfit kekinian yang nyaman untuk melengkapi gaya remaja dan anak muda dalam berbagai aktivitas sehari-hari.
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="product-card">
+                <div>
+                  <div class="product-img-wrap">
+                    <div class="product-tag">
+                      <span class="dot"></span>
+                      <span>Urban Style outfit Skena</span>
+                    </div>
+                    <img src="gambar/cake-1.png" alt="" class="product-icon">
+                  </div>
+                  <div class="mt-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <span class="small fw-semibold text-secondary text-uppercase" style="letter-spacing: .05em;">Trendy Style outfit</span>
+                      <span class="small fw-bold text-warning"><i class="bi bi-star-fill"></i> 4.9 (184)</span>
+                    </div>
+                    <h3 class="h5 mt-2 mb-1">Urban Style Outfit Skena</h3>
+                    <p class="small text-secondary mb-0">Style outfit kekinian yang nyaman untuk melengkapi gaya santai dan aktivitas harian..</p>
+                  </div>
+                </div>
+                <div class="product-footer">
+                  <div>
+                    <span class="d-block" style="font-size: 11px; color: #73575C;">Style Outfit Fashion</span>
+                    <span class="font-display fw-bold fs-5">Rp.150.000</span>
+                  </div>
+                  <button
+                    onclick="handleAddToCart('Strawberry Velvet Bento', 88000)"
+                    class="btn btn-danger btn-sm fw-bold rounded-3 d-inline-flex align-items-center gap-2"
+                  >
+                    <i class="bi bi-plus-lg"></i> Pesan
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="product-card">
+                <div>
+                  <div class="product-img-wrap choco">
+                    <div class="product-tag">
+                      <span class="dot"></span>
+                      <span>Kemeja cowok</span>
+                    </div>
+                    <img src="gambar/cake-2.png" alt="" class="product-icon">
+                  </div>
+                  <div class="mt-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <span class="small fw-semibold text-secondary text-uppercase" style="letter-spacing: .05em;">Casual Trendy Look cowok</span>
+                      <span class="small fw-bold text-warning"><i class="bi bi-star-fill"></i> 5.0 (210)</span>
+                    </div>
+                    <h3 class="h5 mt-2 mb-1">kemeja cowok</h3>
+                    <p class="small text-secondary mb-0">Pilihan fashion casual dengan desain modern untuk tampil stylish dalam keseharian..</p>
+                  </div>
+                </div>
+                <div class="product-footer">
+                  <div>
+                    <span class="d-block" style="font-size: 11px; color: #73575C;">Harga Paket + Maskot</span>
+                    <span class="font-display fw-bold fs-5">Rp 170.000</span>
+                  </div>
+                  <button
+                    onclick="handleAddToCart('Belgian Dark Truffle', 95000)"
+                    class="btn btn-danger btn-sm fw-bold rounded-3 d-inline-flex align-items-center gap-2"
+                  >
+                    <i class="bi bi-plus-lg"></i> Pesan
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="product-card">
+                <div>
+                  <div class="product-img-wrap">
+                    <div class="product-tag green">
+                      <span class="dot"></span>
+                      <span>jeans/baggy Oversize</span>
+                    </div>
+                    <img src="gambar/cake-3.png" alt="" class="product-icon">
+                  </div>
+                  <div class="mt-3">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <span class="small fw-semibold text-secondary text-uppercase" style="letter-spacing: .05em;">casual Trendy Daily Look cowok</span>
+                      <span class="small fw-bold text-warning"><i class="bi bi-star-fill"></i> 4.8 (95)</span>
+                    </div>
+                    <h3 class="h5 mt-2 mb-1">jeans cowok</h3>
+                    <p class="small text-secondary mb-0">Pilihan outfit kekinian yang nyaman untuk menemani gaya santai dan aktivitas sehari-hari.</p>
+                  </div>
+                </div>
+                <div class="product-footer">
+                  <div>
+                    <span class="d-block" style="font-size: 11px; color: #73575C;">Harga Paket + Maskot</span>
+                    <span class="font-display fw-bold fs-5">Rp 120.000</span>
+                  </div>
+                  <button
+                    onclick="handleAddToCart('Kyoto Uji Matcha Cloud', 92000)"
+                    class="btn btn-danger btn-sm fw-bold rounded-3 d-inline-flex align-items-center gap-2"
+                  >
+                    <i class="bi bi-plus-lg"></i> Pesan
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- ==================== TENTANG ==================== -->
+    <section id="tentang" class="tentang-section">
+      <div class="container">
+        <div class="tentang-card">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5 text-center">
+              <div class="mascot-badge-circle">
+                <img src="GAMBAR/gamabr-style-outfit.fashion.png" alt="" class="img-fluid">
+              </div>
+              <h3 class="h5 mt-4">Beragam Pilihan Style Outfit Fashion</h3>
+              <p class="small text-secondary mb-0">Koleksi outfit kekinian yang nyaman untuk menemani gaya dan aktivitas harianmu.</p>
+            </div>
+
+            <div class="col-lg-7">
+              <span class="text-danger fw-bold text-uppercase small"
+              style="letter-spacing: .05em;">Tentang Style outfit fashion</span>
+              <h2 class="mt-2">Tampil Stylish, Jadi Versi Terbaikmu</h2>
+              <p class="text-secondary">
+                Style Outfit Fashion menghadirkan pilihan outfit kekinian untuk remaja dan anak muda yang ingin tampil nyaman dan mengikuti tren dalam keseharian. </p>
+              <div class="row g-3 pt-2 ">
+                <div class="col-sm-6">
+                  <div class="bg-white rounded-3 border p-3 small fw-semibold d-flex align-items-center gap-2" style="border-color: #F2CED6 !important;">
+                    <span class="d-inline-block rounded-circle bg-danger" style="width: 8px; height: 8px;"></span>
+                    Urban Style outfit Skena
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="bg-white rounded-3 border p-3 small fw-semibold d-flex align-items-center gap-2" style="border-color: #F2CED6 !important;">
+                    <span class="d-inline-block rounded-circle bg-danger" style="width: 8px; height: 8px;"></span>
+                    Pilihan CasualTrendy Look Kemeja cowok
+                  </div>
+                </div>
+            
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- ================== TESTIMONI ================== -->
+    <section id="testimoni" class="testimoni-section">
+      <div class="container-fluid">
+        <div class="text-center mx-auto mb-5" style="max-width: 36rem;">
+          <span class="text-danger fw-bold text-uppercse small" style="letter-spacing: .05rem;">Kata Mereka</span>
+          <h2 class="mt-1">Ulasan Pelanggan Setia</h2>
+        </div>
+        <div class="row g-4">
+
+          <div class="col-md-4">
+            <div class="testi-card">
+        
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+        
+              <p class="small mb-0">Style outfit fashion </p>
+        
+              <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+                <div class="testi-avatar">Rg</div>
+        
+                <div>
+                  <h4 class="h6 mb-0">M Rangga</h4>
+                  <span class="small text-secondary">Pantai Labu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-4">
+          <div class="testi-card">
+        
+            <div class="text-warning mb-2">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+        
+            <p class="small mb-0">Packaging pengirimannya sangat aman, cocok banget buat gaya harian kolektor blindbox.</p>
+        
+            <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+              <div class="testi-avatar cream">AI</div>
+        
+              <div>
+                <h4 class="h6 mb-0">Alwan</h4>
+                <span class="small text-secondary">Batang Kuis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testi-card">
+        
+            <div class="text-warning mb-2">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+        
+            <p class="small mb-0">
+              Pilihan outfit saya ini produk kualitasnya bagus, nyaman, cocok untuk gaya sehari-hari.
+            </p>
+        
+            <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+              <div class="testi-avatar cream"> <img src="" alt=""></div>
+        
+              <div>
+                <h4 class="h6 mb-0">Danu</h4>
+                <span class="small text-secondary">Beringin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+      <!-- GALERI -->
+      <section class="galeri-section">
+        <div class="container text-center">
+          <span 
+               class="text-danger fw-bold text-uppercase small"
+               style="letter-spacing: 0.05em;"
+               >#Style Outfit Fasihon</span>
+         
+         <h2 class="mt-1 mb-4">Bawak Pulang Aksesories Untuk Gaya Manismu</h2>
+
+         <div class="row g-3">
+          <div class="col-6 col-md-3">
+            <div class="galeri-box galeri-1">Style Outfit Fasihon</div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="galeri-box galeri-2">Urban Style outfit Sken</div>
+         </div>
+         <div class="col-6 col-md-4">
+          <div class="galeri-box galeri-2">Pilihan CasualTrendy Look Kemeja cowok</div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="galeri-box galeri-2"> Pilihan Casual Trendy Look jeans cowok</div>
+        </div>
+      </div>
+    </div>
+</section>
+    </main>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
